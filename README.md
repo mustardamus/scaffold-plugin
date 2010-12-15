@@ -60,4 +60,91 @@ You can have live demos in your HTML documentation. Simply use these H3 (`###` i
     $('#hi-there').text('jQuery!');
 
 
-## Getting Started - A session
+## Getting Started - A Session
+
+    ~ $ j
+    ~/Code/jQuery $ git clone git@github.com:mustardamus/scaffold-plugin.git testy-plugin
+    Cloning into testy-plugin...
+    remote: Counting objects: 25, done.
+    remote: Compressing objects: 100% (21/21), done.
+    remote: Total 25 (delta 1), reused 0 (delta 0)
+    Receiving objects: 100% (25/25), 43.94 KiB, done.
+    Resolving deltas: 100% (1/1), done.
+    ~/Code/jQuery $ cd testy-plugin/
+    ~/Code/jQuery/testy-plugin $ rm -rf .git #erase remote repo link and all commits at once
+    ~/Code/jQuery/testy-plugin $ ls -la
+    total 24
+    drwxr-xr-x   9 mustardamus  staff   306 15 Dez 21:22 .
+    drwxr-xr-x  11 mustardamus  staff   374 15 Dez 21:21 ..
+    -rw-r--r--   1 mustardamus  staff    14 15 Dez 21:21 .gitignore
+    -rw-r--r--   1 mustardamus  staff  2097 15 Dez 21:21 README.md
+    drwxr-xr-x   4 mustardamus  staff   136 15 Dez 21:21 assets
+    drwxr-xr-x   5 mustardamus  staff   170 15 Dez 21:21 docs
+    -rw-r--r--   1 mustardamus  staff    86 15 Dez 21:21 jquery.scaffold.js
+    drwxr-xr-x   3 mustardamus  staff   102 15 Dez 21:21 tasks
+    drwxr-xr-x   5 mustardamus  staff   170 15 Dez 21:21 tests
+    ~/Code/jQuery/testy-plugin $ cd tasks/
+    ~/Code/jQuery/testy-plugin/tasks $ thor scaffold:init
+    How do you want to name your new Plugin? Lowercase, one word and something kewl please:
+    > testy
+    Renamed 'scaffold' to 'testy' in ../jquery.scaffold.js.
+    Renamed 'jquery.scaffold.js' to 'jquery.testy.js' in ../docs/index.html.
+    Renamed 'Scaffold' to 'Testy' in ../docs/index.html.
+    Renamed 'jquery.scaffold.js' to 'jquery.testy.js' in ../tests/index.html.
+    Renamed 'Scaffold' to 'Testy' in ../tests/index.html.
+    Renamed '<script type="text/javascript" src="scaffold.js"></script>' to '' in ../tests/index.html.
+    Renamed '<script type="text/javascript" src="../docs/js/scaffold.js"></script>' to '' in ../tests/index.html.
+    Renamed 'scaffold()' to 'testy()' in ../tests/plugin.js.
+    Renamed the Plugin File '../jquery.scaffold.js' to '../jquery.testy.js'.
+    Deleted the Scaffold Tests.
+    Done.
+    ~/Code/jQuery/testy-plugin/tasks $ thor scaffold:docs
+    Done.
+    ~/Code/jQuery/testy-plugin/tasks $ thor scaffold:standalone
+    ../docs/../assets/js/jquery.js 		 >> ../tmp/docs/js/jquery.js
+    ../docs/../jquery.testy.js 		 >> ../tmp/docs/js/jquery.testy.js
+    Done. Check tmp/docs/ path.
+    ~/Code/jQuery/testy-plugin/tasks $ thor scaffold:pack
+    Name of the archive (*.zip): testy.0.0.1
+    Creating: ../tmp/testy.0.0.1.zip
+    Packing: ../tmp/docs/css
+    Packing: ../tmp/docs/css/main.css
+    Packing: ../tmp/docs/css/main.less
+    Packing: ../tmp/docs/css/reset.css
+    Packing: ../tmp/docs/index.html
+    Packing: ../tmp/docs/js
+    Packing: ../tmp/docs/js/jquery.js
+    Packing: ../tmp/docs/js/jquery.testy.js
+    Packing: ../tmp/docs/js/scaffold.js
+    Done.
+    ~/Code/jQuery/testy-plugin/tasks $ ..
+    ~/Code/jQuery/testy-plugin $ git init
+    Initialized empty Git repository in /Users/mustardamus/Code/jQuery/testy-plugin/.git/
+    ~/Code/jQuery/testy-plugin $ git add .
+    ~/Code/jQuery/testy-plugin $ git commit -m "initial commit"
+    [master (root-commit) fafa27f] initial commit
+     14 files changed, 1888 insertions(+), 0 deletions(-)
+     create mode 100644 .gitignore
+     create mode 100644 README.md
+     create mode 100644 assets/css/qunit.css
+     create mode 100644 assets/js/jquery.js
+     create mode 100644 assets/js/qunit.js
+     create mode 100644 docs/css/main.css
+     create mode 100644 docs/css/main.less
+     create mode 100644 docs/css/reset.css
+     create mode 100644 docs/index.html
+     create mode 100644 docs/js/scaffold.js
+     create mode 100644 jquery.testy.js
+     create mode 100644 tasks/thorfile
+     create mode 100644 tests/index.html
+     create mode 100644 tests/plugin.js
+    ~/Code/jQuery/testy-plugin $ git remote add origin git@github.com:mustardamus/testy-plugin.git
+    ~/Code/jQuery/testy-plugin $ git push origin master
+    Counting objects: 24, done.
+    Delta compression using up to 2 threads.
+    Compressing objects: 100% (19/19), done.
+    Writing objects: 100% (24/24), 41.88 KiB, done.
+    Total 24 (delta 1), reused 0 (delta 0)
+    To git@github.com:mustardamus/testy-plugin.git
+     * [new branch]      master -> master
+     
