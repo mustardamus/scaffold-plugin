@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>jQuery Scaffold Plugin - Documentation</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../jquery.scaffold.js"></script>
+    <script type="text/javascript" src="js/scaffold.js"></script>
+  </head>
+  
+  <body>
+    <div id="wrapper"><h1>Scaffold jQuery Project</h1>
+
+<p>This is a little collection of tools that help me to speed up jQuery Plugin Development.</p>
+
+<h2>Features</h2>
+
+<ul>
+<li>Maintain documentation in one place, this <code>README.md</code></li>
+<li>Parse the markdown and generate HTML documentation with live demos</li>
+<li>Create standalone HTML documentation (manage file dependencies)</li>
+<li>Pack the standalone HTML documentation for Download Archives</li>
+<li>Baked in QUnit testing</li>
+<li>Stylesheet of the HTML documentation written in <a href="http://lesscss.org/">LESS</a></li>
+<li>Watch <code>README.md</code> for changes and automatically generate the HTML documentation</li>
+<li>Commands bundled in a <code>thorfile</code></li>
+</ul>
+
+
+<h2>Requirements</h2>
+
+<p>The latest jQuery Version and QUnit are included in this package. You'll need the following Gems to work with the <code>thorfile</code>:</p>
+
+<ul>
+<li><a href="https://github.com/wycats/thor">thor</a></li>
+<li><a href="https://github.com/rtomayko/rdiscount">rdiscount</a></li>
+<li><a href="https://github.com/aussiegeek/rubyzip">rubyzip</a></li>
+<li><a href="https://github.com/hpricot/hpricot">hpricot</a></li>
+<li><a href="https://github.com/TwP/directory_watcher/">directory_watcher</a></li>
+</ul>
+
+
+<h2>Thor Commands</h2>
+
+<pre><code>~/scaffold-plugin $ cd tasks/
+~/scaffold-plugin/tasks $ thor list
+scaffold
+--------
+thor scaffold:init        # Rename filenames and strings in files. Remove Scaffold testing.
+thor scaffold:docs        # Create the HTML Docs from ../README.md in ../docs.
+thor scaffold:watch       # Watch for changes in ../README.rd and generate the docs.
+thor scaffold:standalone  # Build standalone HTML Docs.
+thor scaffold:pack        # Pack the standalone HTML Docs.
+</code></pre>
+
+<h2>Live Demos</h2>
+
+<p>You can have live demos in your HTML documentation. Simply use these H3 (<code>###</code> in markdown) headings to indicate code:</p>
+
+<ul>
+<li><code>Your HTML</code> - HTML Markup of the demo</li>
+<li><code>Your Javascript</code> - The actual Javascript. jQuery (<code>$</code>) is already loaded. Don't mind about <code>$(document).ready()</code></li>
+<li><code>Your CSS</code> - The CSS that should be applied to the <code>&lt;head&gt;</code></li>
+</ul>
+
+
+<h3>Your HTML</h3>
+
+<pre><code>&lt;div id="hi-there"&gt;&lt;/div&gt;
+</code></pre>
+
+<h3>Your CSS</h3>
+
+<pre><code>#hi-there { font-family: sans; font-size: 16px; }
+</code></pre>
+
+<h3>Your Javascript</h3>
+
+<pre><code>$('#hi-there').text('jQuery!');
+</code></pre>
+
+<h2>Getting Started - A session</h2>
+</div></body></html>
