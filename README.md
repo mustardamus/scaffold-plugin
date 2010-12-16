@@ -12,6 +12,7 @@ This is a little collection of tools that help me to speed up jQuery Plugin Deve
  * Baked in QUnit testing
  * Stylesheet of the HTML documentation written in [LESS](http://lesscss.org/)
  * Watch `README.md` for changes and automatically generate the HTML documentation
+ * Rename filenames and strings in files for initialization
  * Commands bundled in a `thorfile`
 
 
@@ -28,8 +29,6 @@ The latest jQuery Version and QUnit are included in this package. You'll need th
 
 ## Thor Commands
 
-    ~/scaffold-plugin $ cd tasks/
-    ~/scaffold-plugin/tasks $ thor list
     scaffold
     --------
     thor scaffold:init        # Rename filenames and strings in files. Remove Scaffold testing.
@@ -44,8 +43,8 @@ The latest jQuery Version and QUnit are included in this package. You'll need th
 You can have live demos in your HTML documentation. Simply use these H3 (`###` in markdown) headings to indicate code:
 
  * `Your HTML` - HTML Markup of the demo
- * `Your Javascript` - The actual Javascript. jQuery (`$`) is already loaded. Don't mind about `$(document).ready()`
  * `Your CSS` - The CSS that should be applied to the `<head>`
+ * `Your Javascript` - The actual Javascript. jQuery (`$`) is already loaded. Don't mind about `$(document).ready()`
 
 ### Your HTML
 
@@ -72,17 +71,6 @@ You can have live demos in your HTML documentation. Simply use these H3 (`###` i
     Resolving deltas: 100% (1/1), done.
     ~/Code/jQuery $ cd testy-plugin/
     ~/Code/jQuery/testy-plugin $ rm -rf .git #erase remote repo link and all commits at once
-    ~/Code/jQuery/testy-plugin $ ls -la
-    total 24
-    drwxr-xr-x   9 mustardamus  staff   306 15 Dez 21:22 .
-    drwxr-xr-x  11 mustardamus  staff   374 15 Dez 21:21 ..
-    -rw-r--r--   1 mustardamus  staff    14 15 Dez 21:21 .gitignore
-    -rw-r--r--   1 mustardamus  staff  2097 15 Dez 21:21 README.md
-    drwxr-xr-x   4 mustardamus  staff   136 15 Dez 21:21 assets
-    drwxr-xr-x   5 mustardamus  staff   170 15 Dez 21:21 docs
-    -rw-r--r--   1 mustardamus  staff    86 15 Dez 21:21 jquery.scaffold.js
-    drwxr-xr-x   3 mustardamus  staff   102 15 Dez 21:21 tasks
-    drwxr-xr-x   5 mustardamus  staff   170 15 Dez 21:21 tests
     ~/Code/jQuery/testy-plugin $ cd tasks/
     ~/Code/jQuery/testy-plugin/tasks $ thor scaffold:init
     How do you want to name your new Plugin? Lowercase, one word and something kewl please:
@@ -147,4 +135,13 @@ You can have live demos in your HTML documentation. Simply use these H3 (`###` i
     Total 24 (delta 1), reused 0 (delta 0)
     To git@github.com:mustardamus/testy-plugin.git
      * [new branch]      master -> master
-     
+
+Just in case you find yourserlf on MacOSX and you open multiple tabs everytime you start to work on your project
+(watch `*.less`, watch `README.md`, etc.) try [Terminitor](https://github.com/achiu/terminitor).
+
+
+## License
+
+[WTFPL](http://sam.zoy.org/wtfpl/COPYING). Really, this is just a quick toolbox I had to create to DRY out the
+annoying steps to finally get into developing. Feel free to add/change/remove tools. If you think I could also
+benefit from your changes I'd like a pull request.

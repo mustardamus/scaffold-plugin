@@ -45,10 +45,12 @@ $(document).ready(function() {
         header.append('<style type="text/css">' + codes.css.code + '</style>');
       }
       
+      var heading = $('<h3/>', { text: 'Demo' }).insertAfter(codes.js.element);
+      
       $('<div/>', {
         'class': 'demo',
         html: codes.html.code
-      }).insertAfter(codes.js.element);
+      }).insertAfter(heading);
 
       good(codes.js.code);
     }

@@ -27,6 +27,7 @@
 <li>Baked in QUnit testing</li>
 <li>Stylesheet of the HTML documentation written in <a href="http://lesscss.org/">LESS</a></li>
 <li>Watch <code>README.md</code> for changes and automatically generate the HTML documentation</li>
+<li>Rename filenames and strings in files for initialization</li>
 <li>Commands bundled in a <code>thorfile</code></li>
 </ul>
 
@@ -46,9 +47,7 @@
 
 <h2>Thor Commands</h2>
 
-<pre><code>~/scaffold-plugin $ cd tasks/
-~/scaffold-plugin/tasks $ thor list
-scaffold
+<pre><code>scaffold
 --------
 thor scaffold:init        # Rename filenames and strings in files. Remove Scaffold testing.
 thor scaffold:docs        # Create the HTML Docs from ../README.md in ../docs.
@@ -63,8 +62,8 @@ thor scaffold:pack        # Pack the standalone HTML Docs.
 
 <ul>
 <li><code>Your HTML</code> - HTML Markup of the demo</li>
-<li><code>Your Javascript</code> - The actual Javascript. jQuery (<code>$</code>) is already loaded. Don't mind about <code>$(document).ready()</code></li>
 <li><code>Your CSS</code> - The CSS that should be applied to the <code>&lt;head&gt;</code></li>
+<li><code>Your Javascript</code> - The actual Javascript. jQuery (<code>$</code>) is already loaded. Don't mind about <code>$(document).ready()</code></li>
 </ul>
 
 
@@ -95,17 +94,6 @@ Receiving objects: 100% (25/25), 43.94 KiB, done.
 Resolving deltas: 100% (1/1), done.
 ~/Code/jQuery $ cd testy-plugin/
 ~/Code/jQuery/testy-plugin $ rm -rf .git #erase remote repo link and all commits at once
-~/Code/jQuery/testy-plugin $ ls -la
-total 24
-drwxr-xr-x   9 mustardamus  staff   306 15 Dez 21:22 .
-drwxr-xr-x  11 mustardamus  staff   374 15 Dez 21:21 ..
--rw-r--r--   1 mustardamus  staff    14 15 Dez 21:21 .gitignore
--rw-r--r--   1 mustardamus  staff  2097 15 Dez 21:21 README.md
-drwxr-xr-x   4 mustardamus  staff   136 15 Dez 21:21 assets
-drwxr-xr-x   5 mustardamus  staff   170 15 Dez 21:21 docs
--rw-r--r--   1 mustardamus  staff    86 15 Dez 21:21 jquery.scaffold.js
-drwxr-xr-x   3 mustardamus  staff   102 15 Dez 21:21 tasks
-drwxr-xr-x   5 mustardamus  staff   170 15 Dez 21:21 tests
 ~/Code/jQuery/testy-plugin $ cd tasks/
 ~/Code/jQuery/testy-plugin/tasks $ thor scaffold:init
 How do you want to name your new Plugin? Lowercase, one word and something kewl please:
@@ -171,4 +159,13 @@ Total 24 (delta 1), reused 0 (delta 0)
 To git@github.com:mustardamus/testy-plugin.git
  * [new branch]      master -&gt; master
 </code></pre>
+
+<p>Just in case you find yourserlf on MacOSX and you open multiple tabs everytime you start to work on your project
+(watch <code>*.less</code>, watch <code>README.md</code>, etc.) try <a href="https://github.com/achiu/terminitor">Terminitor</a>.</p>
+
+<h2>License</h2>
+
+<p><a href="http://sam.zoy.org/wtfpl/COPYING">WTFPL</a>. Really, this is just a quick toolbox I had to create to DRY out the
+annoying steps to finally get into developing. Feel free to add/change/remove tools. If you think I could also
+benefit from your changes I'd like a pull request.</p>
 </div></body></html>
